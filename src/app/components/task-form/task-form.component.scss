@@ -1,0 +1,97 @@
+.alert {
+  margin-bottom: 1rem;
+}
+
+/* Optional animation for the alert */
+.fade.show {
+  transition: opacity 0.15s linear;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+  }
+
+  .logo-icon {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.75rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    i {
+      font-size: 1.8rem; /* Adjust icon size */
+      color: white;
+      display: flex;
+    }
+  }
+
+  .app-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .title-part-1 {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .title-part-2 {
+      color: #fffd8c;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .title-part-3 {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    
+    .app-title {
+      font-size: 1.5rem;
+    }
+    
+    .logo-icon {
+      padding: 0.5rem;
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
